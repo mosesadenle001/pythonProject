@@ -8,7 +8,7 @@
 # numbers = []
 # ([for number in range(1,1001) if number ** 6])
 #    numbers.append(number)
-print(numbers)
+#print(numbers)
 
 
 # using List comprehension
