@@ -43,7 +43,7 @@
 # my_dog.set_gender("female")
 
 
-'''EX1 Create a Calculator class with main functionality: add, divide, multiply, subtract , etc.. 
+'''EX1 Create a Calculator class with main functionality: add, divide, multiply, subtract , etc..
 Initiate class and show up some calculations.'''
 
 #
@@ -77,7 +77,8 @@ Initiate class and show up some calculations.'''
 # print(acalc.divide())
 # print(acalc.multiply())
 #
-# '''EX2 Create the instance attributes fullname and email in the Employee class. Given a person's first and last names:
+# '''EX2 Create the instance attributes fullname and email in the Employee class.
+# Given a person's first and last names:
 # Form the fullname by simply joining the first and last name together, separated by a space.
 # Form the email by joining the first and last name together with a . in between, and
 # follow it with @company.com at the end. Make sure the entire email is in lowercase.'''
@@ -126,7 +127,8 @@ I would get the following attributes and methods:'''
 '''EX4 A country can be said as being big if it is:
 Big in terms of population.
 Big in terms of area.
-Add to the Country class so that it contains the attribute is_big. Set it to True if either criteria are met:
+Add to the Country class so that it contains the attribute is_big. 
+Set it to True if either criteria are met:
 Population is greater than 20 million.
 Area is larger than 3 million square km.
 Also, create a method which compares a country's population density to another country object. 
