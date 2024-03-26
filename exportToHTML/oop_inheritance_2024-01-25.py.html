@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>oop_inheritance_2024-01-25.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #00fdcf;}
+.s1 { color: #bcbec4;}
+.s2 { color: #5f826b; font-style: italic;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+oop_inheritance_2024-01-25.py</font>
+</center></td></tr></table>
+<pre><span class="s0"># class Vehicle:</span>
+<span class="s0">#     def __init__(self, brand, model, capacity,year):</span>
+<span class="s0">#         self.brand = brand</span>
+<span class="s0">#         self.model = model</span>
+<span class="s0">#         self.capacity = capacity</span>
+<span class="s0">#         self.year = year</span>
+<span class="s0">#         self.speed = 0</span>
+<span class="s0">#         self.engine = False</span>
+<span class="s0">#     def calculate_charge(self):</span>
+<span class="s0">#         self.fare = self.capacity * 100</span>
+<span class="s0">#</span>
+<span class="s0">#     def start(self):</span>
+<span class="s0">#         '''vehincle consumption'''</span>
+<span class="s0">#         if not self.engine:</span>
+<span class="s0">#             print(f&quot;{self.brand} {self.model} is working.&quot;)</span>
+<span class="s0">#             self.engine = True</span>
+<span class="s0">#         else:</span>
+<span class="s0">#             print(f&quot;{self.brand} {self.model}  is already working&quot;)</span>
+<span class="s0">#</span>
+<span class="s0">#     def stop(self):</span>
+<span class="s0">#         &quot;&quot;&quot;Stop the vehicle.&quot;&quot;&quot;</span>
+<span class="s0">#         if self.engine:</span>
+<span class="s0">#             print(f&quot;{self.brand} {self.model} is stopping.&quot;)</span>
+<span class="s0">#             self.engine = False</span>
+<span class="s0">#         else:</span>
+<span class="s0">#             print(f&quot;{self.brand} {self.model} is already stopped.&quot;)</span>
+<span class="s0">#</span>
+<span class="s0">#     def speedup(self, kmh):</span>
+<span class="s0">#         &quot;&quot;&quot;speedup' the vehicle.&quot;&quot;&quot;</span>
+<span class="s0">#         if self.engine:</span>
+<span class="s0">#             self.speed += kmh</span>
+<span class="s0">#         print(f'The current speed of the vehincle {self.speed}.')</span>
+<span class="s0">#     def brea(self):</span>
+<span class="s0">#         &quot;&quot;&quot;Apply brakes to the vehicle.&quot;&quot;&quot;</span>
+<span class="s0">#         if self.engine:</span>
+<span class="s0">#             self.speed = 0</span>
+<span class="s0">#         print(f' Press break to the vehincle {self.speed}.')</span>
+<span class="s0">#</span>
+<span class="s0"># class Bus(Vehicle):</span>
+<span class="s0">#     def __init__(self, brand, model, capacity, year):</span>
+<span class="s0">#         super().__init__(brand, model, capacity, year)</span>
+<span class="s0">#         self.capacity = capacity</span>
+<span class="s0">#     def calculate_charge(self):</span>
+<span class="s0">#       self.fare = super().calculate_charge() * 1.1</span>
+<span class="s0">#</span>
+<span class="s0">#     def calculate_total_fare(self):</span>
+<span class="s0">#         initial_fare  = self.calculate_charge()</span>
+<span class="s0">#         if self.calculate_charge.lower() == &quot;Bus&quot;:</span>
+<span class="s0">#             maintenance_charge = 0.1 * initial_fare</span>
+<span class="s0">#             total_fare = initial_fare + maintenance_charge</span>
+<span class="s0">#         else:</span>
+<span class="s0">#             total_fare = initial_fare</span>
+<span class="s0">#         return total_fare</span>
+<span class="s0">#</span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="s2">'''EX 4 
+Lets say we have classes: A, B and C: 
+Modify the program to add a method say_hello to class A that prints &quot;Hello from class A&quot;. 
+Modify the program to add a method say_hello to class B that prints &quot;Hello from class B&quot;. 
+Modify the program to add a method say_hello to class C that prints &quot;Hello from class C&quot;. 
+Create an object of class C and call the say_hello method on it. What is the output? 
+Modify the program so that class B's say_hello method calls the say_hello method of class A using the super() function. 
+Create an object of class C and call the say_hello method on it again. What is the output now?'''</span>
+
+
+<span class="s3">class </span><span class="s1">Animal</span><span class="s4">:</span>
+    <span class="s3">def </span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">self</span><span class="s4">, </span><span class="s1">name</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">species</span><span class="s4">):</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">name </span><span class="s4">= </span><span class="s1">name</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">habitat </span><span class="s4">= </span><span class="s1">habitat</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">species </span><span class="s4">= </span><span class="s1">species</span>
+
+    <span class="s3">def </span><span class="s1">Heterotrophy</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s0">#The Ability to Ingest Food</span>
+        <span class="s3">pass</span>
+    <span class="s3">def </span><span class="s1">noise</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+    <span class="s3">def </span><span class="s1">sound</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+
+    <span class="s3">def </span><span class="s1">motility</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+
+<span class="s3">class </span><span class="s1">Mammal</span><span class="s4">(</span><span class="s1">Animal</span><span class="s4">):</span>
+    <span class="s3">def </span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">self</span><span class="s4">, </span><span class="s1">name</span><span class="s4">,</span><span class="s1">species</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">diff_color</span><span class="s4">, </span><span class="s1">blooded_warm</span><span class="s4">=</span><span class="s3">True</span><span class="s4">):</span>
+        <span class="s1">super</span><span class="s4">().</span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">name</span><span class="s4">, </span><span class="s1">species</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">)</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">diff_color </span><span class="s4">= </span><span class="s1">diff_color</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">blooded_warm </span><span class="s4">= </span><span class="s1">blooded_warm</span>
+
+    <span class="s3">def </span><span class="s1">birth</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+<span class="s3">class </span><span class="s1">Primate</span><span class="s4">(</span><span class="s1">Mammal</span><span class="s4">):</span>
+    <span class="s3">def </span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">self</span><span class="s4">, </span><span class="s1">name</span><span class="s4">, </span><span class="s1">species</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">fur_color</span><span class="s4">, </span><span class="s1">diet</span><span class="s4">, </span><span class="s1">opposable_thumbs</span><span class="s4">=</span><span class="s3">True</span><span class="s4">):</span>
+        <span class="s1">super</span><span class="s4">().</span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">name</span><span class="s4">, </span><span class="s1">species</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">fur_color</span><span class="s4">)</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">diet </span><span class="s4">= </span><span class="s1">diet</span>
+        <span class="s1">self</span><span class="s4">.</span><span class="s1">opposable_thumbs </span><span class="s4">= </span><span class="s1">opposable_thumbs   </span><span class="s0">#All primates have opposable thumbs</span>
+    <span class="s3">def </span><span class="s1">playing</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+
+    <span class="s3">def </span><span class="s1">swing</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">pass</span>
+
+<span class="s3">class </span><span class="s1">Chimpanzee</span><span class="s4">(</span><span class="s1">Primate</span><span class="s4">):</span>
+    <span class="s3">def </span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">self</span><span class="s4">, </span><span class="s1">name</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">diff_color</span><span class="s4">=</span><span class="s5">&quot;Brown and black&quot;</span><span class="s4">, </span><span class="s1">diet</span><span class="s4">=</span><span class="s5">&quot;Omnivore&quot;</span><span class="s4">):</span>
+        <span class="s1">super</span><span class="s4">().</span><span class="s1">__init__</span><span class="s4">(</span><span class="s1">name</span><span class="s4">, </span><span class="s5">&quot;Chimpanzee&quot;</span><span class="s4">, </span><span class="s1">habitat</span><span class="s4">, </span><span class="s1">diff_color</span><span class="s4">, </span><span class="s1">diet</span><span class="s4">)</span>
+
+    <span class="s3">def </span><span class="s1">swing</span><span class="s4">(</span><span class="s1">self</span><span class="s4">):</span>
+        <span class="s3">return </span><span class="s5">f&quot;</span><span class="s3">{</span><span class="s1">self</span><span class="s4">.</span><span class="s1">name</span><span class="s3">} </span><span class="s5">they do swinging from tree to tree!&quot;</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
